@@ -1,4 +1,4 @@
-#### Tarea 5
+### Tarea 5
 1. Solicion del primer problema. Falta: using namespace std;
 2. Solicion del segundo problema. Salida: Hola mundo.
 3. Solicion del tercer problema. Error: Los caracteres para poder ingresar en el arreglo, son muy pocos.
