@@ -2,6 +2,18 @@
 
 using namespace std;
 
+struct alumno {
+	char nombre[50];
+	char apellidos[50];
+	char email[50];
+	int telefono[10];
+	int matricula[8];
+	char direccion[100];
+	int calificacion[4];
+
+};
+
+
 int main() {
 
 	char opcion = '0';
@@ -58,5 +70,48 @@ int main() {
 
 
 	}
+	system("pause");
 	return 0;
 }
+
+void altaAlumno() {
+
+	system("cls");
+	alumno A;
+	FILE *F;
+
+	cout << "\n";
+	do
+	{
+		cout << "Ingrese su Matricula:" << endl;
+		cin >> A.matricula;
+	} while (A.matricula == 9999999);
+
+	cout << "Ingrese su Nombre:" << endl;
+	cin >> A.nombre;
+	cout << "Ingrese su Apellido:" << endl;
+	cin >> A.apellidos;
+	cout << "Ingrese su email:" << endl;
+	cin >> A.email;
+	cout << "Ingrese su telefono:" << endl;
+	cin >> A.telefono;
+	cout << "Ingrese su direccion:" << endl;
+	cin >> A.direccion;
+	cout << "Ingrese calificacion:" <<endl;
+	cin >> A.calificacion;
+
+	F = fopen("datosAlumnos.dat", "a+");// a abre un fichero para anadir datos. si no existe se crea. 
+	//+ simbolo utilizado para abrir el fichero para lectura y escritura
+	if (F == NULL)
+	{
+		cout << "No se puede abrir el archivo" << endl;
+		exit(1); 
+	}
+	fwrite(&A, sizeof(A), 1, F); // direc_dato, tamano_dato, numero_dato, punt_fichero
+	fclose(F); //cierra puntero
+	system("pause");
+}
+
+
+NOTA IMPORTANTEEEEEEE: hola profesor, buenas tardes, tengo unos errores basicos que no puedo corregir, y no se como hacerle. 
+	18/sep/18
