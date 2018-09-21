@@ -15,6 +15,7 @@ struct alumno {
 
 
 int main() {
+	locale::global(locale("spanish")); // nota personal, corregir errores ortograficos. 
 
 	char opcion = '0';
 
@@ -110,8 +111,20 @@ void altaAlumno() {
 	fwrite(&A, sizeof(A), 1, F); // direc_dato, tamano_dato, numero_dato, punt_fichero
 	fclose(F); //cierra puntero
 	system("pause");
+
+	void listaAlumnos() {
+		system("cls");
+		cout << "Todos los registros" << endl;
+		for (int i = 0; i < c; i++) {
+			cout << "Nombre y apellido: " << a[i].nombre << " " << a[i].apellido << endl;
+			cout << "Matricula" << ": " << a[i].matricula << endl << endl;
+			cout << "Email" << ": " << a[i].email<< endl << endl;
+			cout << "Direccion" << ": " << a[i].direccion << endl << endl; 
+			cout << "Telefono" << ": " << a[i].telefono << endl << endl;
+			cout << "Calificacion" << ": " << a[i].calificacion << endl << endl;
+		}
+
+		system("pause > nul");
+		menu();
+	}
 }
-
-
-NOTA IMPORTANTEEEEEEE: hola profesor, buenas tardes, tengo unos errores basicos que no puedo corregir, y no se como hacerle. 
-	18/sep/18
