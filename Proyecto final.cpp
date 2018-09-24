@@ -112,7 +112,8 @@ void altaAlumno() {
 	fclose(F); //cierra puntero
 	system("pause");
 
-	void listaAlumnos() {
+	void listaAlumnos() 
+	{
 		system("cls");
 		cout << "Todos los registros" << endl;
 		for (int i = 0; i < c; i++) {
@@ -122,7 +123,17 @@ void altaAlumno() {
 			cout << "Direccion" << ": " << a[i].direccion << endl << endl; 
 			cout << "Telefono" << ": " << a[i].telefono << endl << endl;
 			cout << "Calificacion" << ": " << a[i].calificacion << endl << endl;
+	}
+		
+	void buscar()
+	{
+		while (opcion==6)
+		{
+			do{
+			cout << listaAlumnos << endl;
+			}
 		}
+	}
 
 		system("pause > nul");
 		menu();
